@@ -1,8 +1,14 @@
+#on:
+#  push:
+#    # Sequence of patterns matched against refs/tags
+#    tags:
+#      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
 on:
   push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    # branches to consider in the event; optional, defaults to all
+    branches:
+      - main
 
 name: Create Release
 
@@ -29,4 +35,4 @@ jobs:
           prerelease: false
 
 
-#time: 13:12
+#time: 14:40
