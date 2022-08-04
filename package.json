@@ -1,7 +1,25 @@
 {
-<<<<<<< HEAD
-  "version": "0.2.0"
-=======
-  "version": "0.1.0"
->>>>>>> b0b907848b66b29f74d186fa59260ed0bd5daa26
+  "name": "match-label-action",
+  "version": "1.0.0",
+  "description": "Ensure Pull Requests contain required labels",
+  "scripts": {
+    "lint": "eslint",
+    "test": "jest",
+    "build": "ncc build ./src/index.js -o ./dist --source-map --license licenses.txt",
+    "all": "npm run lint && npm run test && npm run build"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-github": "^4.3.7",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28.1.3"
+  }
 }
