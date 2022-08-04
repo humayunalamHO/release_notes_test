@@ -73,7 +73,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ steps.increment.outputs.version }} # THIS THROWS ERROR
-        release_name: ${{ steps.increment.outputs.version  }}
+        release_name: "hello"
 #         draft: false
 #         prerelease: false
    
