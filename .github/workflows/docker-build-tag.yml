@@ -68,12 +68,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_use_head_tag: ${{ github.base_ref == 'main' }}
 
-#      - name: Create release
-#        uses: actions/create-release@v1
-#        env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          tag_name: ${{ steps.increment.outputs.version }} # THIS THROWS ERROR
+      - name: Create release
+        uses: actions/create-release@v1
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.increment.outputs.version }} # THIS THROWS ERROR
 #        release_name: "hello"
 #         draft: false
 #         prerelease: false
