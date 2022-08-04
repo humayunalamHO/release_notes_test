@@ -71,7 +71,7 @@ jobs:
       - name: Create release
         uses: actions/create-release@v1
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ steps.increment.outputs.version }} # THIS THROWS ERROR
         release_name: ${{ steps.increment.outputs.version  }}
           draft: false
