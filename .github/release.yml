@@ -7,12 +7,12 @@ changelog:
   categories:
     - title: Breaking Changes
       labels:
-#        - Semver-Major
+        - Semver-Major
         - major        
         - breaking-change
     - title: Exciting New Features
       labels:
-#        - Semver-Minor
+        - Semver-Minor
         - minor        
         - enhancement
     - title: Other Changes

@@ -67,24 +67,3 @@ jobs:
           tag: ${{steps.increment.outputs.version}}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_use_head_tag: ${{ github.base_ref == 'main' }}
-
-  create_release:
-  needs: [publish]
-  runs-on: ubuntu-latest
-
-
-  steps:
-  - uses: actions/checkout@v2
-
-  - name: Echo release name
-    run: |
-      echo ${{ steps.increment.outputs.version }} # this outputs the right name for the release
-
-  - name: Create release
-    uses: actions/create-release@v1
-    env:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    tag_name: ${{ steps.increment.outputs.version  }} # THIS THROWS ERROR
-    release_name: ${{ steps.increment.outputs.version  }}
-      draft: false
-      prerelease: false
